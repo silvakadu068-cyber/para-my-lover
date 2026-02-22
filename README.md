@@ -1,4 +1,4 @@
-[index (1).html](https://github.com/user-attachments/files/25472883/index.1.html)
+[index (2).html](https://github.com/user-attachments/files/25472955/index.2.html)
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,71 +9,63 @@
 <style>
 :root{--rose:#c0395a;--blush:#f7c5d2;--cream:#fff8f0;--gold:#d4a853;--deep:#0d0508;}
 *{box-sizing:border-box;margin:0;padding:0;}
-html{scroll-behavior:smooth;}
-body{background:var(--deep);font-family:'Lato',sans-serif;min-height:100vh;overflow-x:hidden;color:var(--cream);}
-
-/* Slideshow background */
+body{background:var(--deep);font-family:"Lato",sans-serif;min-height:100vh;overflow-x:hidden;color:var(--cream);}
 #bg-slideshow{position:fixed;inset:0;z-index:0;}
-.bg-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.5s ease;filter:blur(3px) brightness(0.3);}
+.bg-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.5s ease;filter:blur(4px) brightness(0.28);}
 .bg-slide.active{opacity:1;}
-
-/* Overlay gradient */
-#bg-slideshow::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#0d050888 0%,#0d0508cc 60%,#0d0508ff 100%);z-index:1;}
-
-/* Petals */
+#bg-slideshow::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0d050888 0%,#0d0508cc 50%,#0d0508ff 100%);z-index:1;}
 .petals{position:fixed;inset:0;pointer-events:none;z-index:2;overflow:hidden;}
 .petal{position:absolute;background:radial-gradient(ellipse at 30% 30%,#f7c5d2,#c0395a88);border-radius:50% 0 50% 0;animation:fall linear infinite;opacity:0;}
 @keyframes fall{0%{transform:translateY(-20px) rotate(0deg);opacity:.7}100%{transform:translateY(110vh) rotate(360deg);opacity:0}}
-
-/* App */
-.app{position:relative;z-index:3;max-width:480px;margin:0 auto;padding:20px 14px 80px;display:flex;flex-direction:column;align-items:center;gap:22px;}
-
-/* Header */
-header{text-align:center;padding-top:20px;}
-.app-name{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,7vw,2.6rem);font-style:italic;background:linear-gradient(135deg,var(--gold),var(--blush));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
+.app{position:relative;z-index:3;max-width:480px;margin:0 auto;padding:20px 14px 60px;display:flex;flex-direction:column;align-items:center;gap:20px;}
+header{text-align:center;padding-top:16px;}
+.app-name{font-family:"Playfair Display",serif;font-size:clamp(1.8rem,7vw,2.6rem);font-style:italic;background:linear-gradient(135deg,var(--gold),var(--blush));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .app-subtitle{font-size:.72rem;letter-spacing:3px;text-transform:uppercase;color:var(--rose);margin-top:5px;opacity:.8;}
-.heart-icon{font-size:2.2rem;animation:pulse 1.5s ease-in-out infinite;display:block;margin:10px auto 4px;}
+.heart-icon{font-size:2.2rem;animation:pulse 1.5s ease-in-out infinite;display:block;margin:10px auto 4px;cursor:pointer;}
 @keyframes pulse{0%,100%{transform:scale(1)}50%{transform:scale(1.25)}}
-
-/* Counters */
-.counters-wrap{width:100%;display:flex;flex-direction:column;gap:12px;}
-.counter-card{width:100%;background:linear-gradient(135deg,rgba(58,10,32,.85),rgba(31,10,20,.9));border:1px solid var(--gold);border-radius:20px;padding:18px 20px;text-align:center;box-shadow:0 0 30px #d4a85322;backdrop-filter:blur(10px);}
-.counter-card.apart{border-color:#7b3a8a;}
+.counter-card{width:100%;background:linear-gradient(135deg,rgba(58,10,32,.88),rgba(31,10,20,.92));border:1px solid var(--gold);border-radius:20px;padding:18px 20px;text-align:center;box-shadow:0 0 30px #d4a85322;backdrop-filter:blur(10px);}
+.counter-card.apart{border-color:#8b4a9a;}
 .counter-label{font-size:.68rem;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
-.counter-card.apart .counter-label{color:#c97de0;}
-.counter-numbers{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
+.counter-card.apart .counter-label{color:#d4a0e8;}
+.counter-numbers{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;}
 .counter-unit{display:flex;flex-direction:column;align-items:center;gap:3px;}
-.counter-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--blush);line-height:1;text-shadow:0 0 20px #c0395a88;}
-.counter-card.apart .counter-num{color:#e8b4f8;text-shadow:0 0 20px #7b3a8a88;}
+.counter-num{font-family:"Playfair Display",serif;font-size:2rem;color:var(--blush);line-height:1;text-shadow:0 0 20px #c0395a88;}
+.counter-card.apart .counter-num{color:#e8c4f8;text-shadow:0 0 20px #8b4a9a88;}
 .counter-name{font-size:.58rem;letter-spacing:2px;text-transform:uppercase;color:var(--rose);opacity:.8;}
-.counter-card.apart .counter-name{color:#c97de0;}
-.counter-sep{font-size:1.6rem;color:#c0395a44;align-self:center;}
-.counter-card.apart .counter-sep{color:#7b3a8a44;}
+.counter-card.apart .counter-name{color:#d4a0e8;}
+.counter-sep{font-size:1.4rem;color:#c0395a33;align-self:center;}
 .counter-since{margin-top:8px;font-size:.72rem;color:#c0395a88;font-style:italic;}
-.counter-card.apart .counter-since{color:#c97de088;}
+.counter-card.apart .counter-since{color:#8b4a9a88;}
 
-/* Photo gallery strip */
-.photo-strip{width:100%;display:flex;gap:8px;overflow-x:auto;padding:4px 0;scrollbar-width:none;}
+/* Photo strip */
+.photo-strip{width:100%;display:flex;gap:8px;overflow-x:auto;padding:4px 2px;scrollbar-width:none;}
 .photo-strip::-webkit-scrollbar{display:none;}
-.photo-strip img{height:80px;width:60px;object-fit:cover;border-radius:10px;border:2px solid #c0395a44;flex-shrink:0;cursor:pointer;transition:all .2s;}
-.photo-strip img:hover{border-color:var(--rose);transform:scale(1.05);}
+.photo-strip img{height:80px;width:64px;object-fit:cover;border-radius:10px;border:2px solid #c0395a33;flex-shrink:0;cursor:pointer;transition:all .2s;}
+.photo-strip img:hover{border-color:var(--rose);transform:scale(1.07);}
 
-/* Music bar */
-.music-bar{width:100%;background:linear-gradient(135deg,rgba(42,10,26,.9),rgba(31,13,22,.95));border:1px solid #c0395a44;border-radius:16px;padding:14px 16px;display:flex;align-items:center;gap:12px;backdrop-filter:blur(10px);}
-.music-info{flex:1;overflow:hidden;}
-.music-title{font-size:.8rem;color:var(--blush);font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+/* Music player */
+.music-card{width:100%;background:linear-gradient(135deg,rgba(42,10,26,.92),rgba(31,13,22,.95));border:1px solid #c0395a55;border-radius:20px;overflow:hidden;backdrop-filter:blur(10px);}
+.music-info-bar{display:flex;align-items:center;gap:12px;padding:14px 16px;}
+.music-disc{width:44px;height:44px;background:linear-gradient(135deg,var(--rose),#8b1a34);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;transition:animation .2s;}
+.music-disc.spinning{animation:spin 3s linear infinite;}
+@keyframes spin{to{transform:rotate(360deg)}}
+.music-text{flex:1;overflow:hidden;}
+.music-title{font-size:.82rem;color:var(--blush);font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
 .music-sub{font-size:.65rem;color:#c0395a88;margin-top:2px;}
-.music-play-btn{width:40px;height:40px;background:linear-gradient(135deg,var(--rose),#8b1a34);border:none;border-radius:50%;color:#fff;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;}
-.music-play-btn:hover{transform:scale(1.1);}
-.music-play-btn.playing{animation:spinm 3s linear infinite;}
-@keyframes spinm{to{transform:rotate(360deg)}}
-.music-wave{display:flex;align-items:flex-end;gap:2px;height:20px;}
-.music-wave span{width:3px;background:var(--rose);border-radius:2px;animation:wave .8s ease-in-out infinite;}
-.music-wave span:nth-child(2){animation-delay:.1s}
-.music-wave span:nth-child(3){animation-delay:.2s}
-.music-wave span:nth-child(4){animation-delay:.3s}
-.music-wave.paused span{animation:none;height:3px!important;}
-@keyframes wave{0%,100%{height:4px}50%{height:16px}}
+.music-toggle{width:40px;height:40px;background:linear-gradient(135deg,var(--rose),#8b1a34);border:none;border-radius:50%;color:#fff;font-size:1.1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .2s;flex-shrink:0;box-shadow:0 2px 12px #c0395a55;}
+.music-toggle:hover{transform:scale(1.1);}
+.music-wave{display:flex;align-items:flex-end;gap:2px;height:18px;padding:0 2px;}
+.music-wave span{width:3px;background:var(--rose);border-radius:2px;transition:all .3s;}
+.music-wave.on span{animation:wave .7s ease-in-out infinite;}
+.music-wave.on span:nth-child(2){animation-delay:.12s}
+.music-wave.on span:nth-child(3){animation-delay:.24s}
+.music-wave.on span:nth-child(4){animation-delay:.36s}
+.music-wave span{height:3px;}
+@keyframes wave{0%,100%{height:3px}50%{height:16px}}
+/* Hidden YT iframe that actually plays */
+#yt-container{width:100%;height:0;overflow:hidden;transition:height .3s;}
+#yt-container.open{height:200px;}
+#yt-frame{width:100%;height:200px;border:none;display:block;}
 
 /* Lightbox */
 #lightbox{position:fixed;inset:0;background:#000000ee;z-index:500;display:none;align-items:center;justify-content:center;}
@@ -88,83 +80,71 @@ header{text-align:center;padding-top:20px;}
 </head>
 <body>
 
-<!-- Background slideshow -->
 <div id="bg-slideshow"></div>
-
-<!-- Petals -->
 <div class="petals" id="petals"></div>
-
-<!-- Lightbox -->
-<div id="lightbox" onclick="this.classList.remove('open')">
-  <img id="lb-img" src="" alt="">
-</div>
+<div id="lightbox" onclick="this.classList.remove('open')"><img id="lb-img" src="" alt=""></div>
 
 <div class="app">
   <header>
-    <span class="heart-icon">❤️</span>
+    <span class="heart-icon" id="heart-icon">❤️</span>
     <div class="app-name">Para Minha Maria</div>
     <div class="app-subtitle">com todo o meu amor</div>
   </header>
 
-  <!-- Contadores -->
-  <div class="counters-wrap">
-    <!-- Juntos -->
-    <div class="counter-card">
-      <div class="counter-label">💍 Juntos há</div>
-      <div class="counter-numbers">
-        <div class="counter-unit"><div class="counter-num" id="j-a">0</div><div class="counter-name">anos</div></div>
-        <div class="counter-sep">·</div>
-        <div class="counter-unit"><div class="counter-num" id="j-m">0</div><div class="counter-name">meses</div></div>
-        <div class="counter-sep">·</div>
-        <div class="counter-unit"><div class="counter-num" id="j-d">0</div><div class="counter-name">dias</div></div>
-        <div class="counter-sep">·</div>
-        <div class="counter-unit"><div class="counter-num" id="j-h">0</div><div class="counter-name">horas</div></div>
-        <div class="counter-sep">·</div>
-        <div class="counter-unit"><div class="counter-num" id="j-min">0</div><div class="counter-name">min</div></div>
-      </div>
-      <div class="counter-since">desde 11 de novembro de 2025 🌹</div>
+  <!-- Contador juntos -->
+  <div class="counter-card">
+    <div class="counter-label">💍 Juntos há</div>
+    <div class="counter-numbers">
+      <div class="counter-unit"><div class="counter-num" id="j-a">0</div><div class="counter-name">anos</div></div>
+      <div class="counter-sep">·</div>
+      <div class="counter-unit"><div class="counter-num" id="j-m">0</div><div class="counter-name">meses</div></div>
+      <div class="counter-sep">·</div>
+      <div class="counter-unit"><div class="counter-num" id="j-d">0</div><div class="counter-name">dias</div></div>
+      <div class="counter-sep">·</div>
+      <div class="counter-unit"><div class="counter-num" id="j-h">0</div><div class="counter-name">horas</div></div>
+      <div class="counter-sep">·</div>
+      <div class="counter-unit"><div class="counter-num" id="j-min">0</div><div class="counter-name">min</div></div>
     </div>
-
-    <!-- Separados -->
-    <div class="counter-card apart">
-      <div class="counter-label">💔 Sem se ver há</div>
-      <div class="counter-numbers">
-        <div class="counter-unit"><div class="counter-num" id="s-d">0</div><div class="counter-name">dias</div></div>
-        <div class="counter-sep">·</div>
-        <div class="counter-unit"><div class="counter-num" id="s-h">0</div><div class="counter-name">horas</div></div>
-        <div class="counter-sep">·</div>
-        <div class="counter-unit"><div class="counter-num" id="s-min">0</div><div class="counter-name">min</div></div>
-        <div class="counter-sep">·</div>
-        <div class="counter-unit"><div class="counter-num" id="s-sec">0</div><div class="counter-name">seg</div></div>
-      </div>
-      <div class="counter-since">desde 23 de janeiro de 2026 🥺</div>
-    </div>
+    <div class="counter-since">desde 11 de novembro de 2025 🌹</div>
   </div>
 
-  <!-- Fotos strip -->
+  <!-- Contador separados -->
+  <div class="counter-card apart">
+    <div class="counter-label">💔 Sem se ver há</div>
+    <div class="counter-numbers">
+      <div class="counter-unit"><div class="counter-num" id="s-d">0</div><div class="counter-name">dias</div></div>
+      <div class="counter-sep">·</div>
+      <div class="counter-unit"><div class="counter-num" id="s-h">0</div><div class="counter-name">horas</div></div>
+      <div class="counter-sep">·</div>
+      <div class="counter-unit"><div class="counter-num" id="s-min">0</div><div class="counter-name">min</div></div>
+      <div class="counter-sep">·</div>
+      <div class="counter-unit"><div class="counter-num" id="s-sec">0</div><div class="counter-name">seg</div></div>
+    </div>
+    <div class="counter-since">desde 23 de janeiro de 2026 🥺</div>
+  </div>
+
+  <!-- Fotos -->
   <div class="photo-strip" id="photo-strip"></div>
 
-  <!-- Music bar -->
-  <div class="music-bar">
-    <div id="music-wave" class="music-wave paused">
-      <span></span><span></span><span></span><span></span>
+  <!-- Música -->
+  <div class="music-card">
+    <div class="music-info-bar">
+      <div class="music-disc" id="music-disc">🎵</div>
+      <div class="music-wave" id="music-wave"><span></span><span></span><span></span><span></span></div>
+      <div class="music-text">
+        <div class="music-title">Poesia Acústica #2 — Sobre Nós</div>
+        <div class="music-sub">Delacruz · Maria · Ducon · BK' e outros</div>
+      </div>
+      <button class="music-toggle" id="music-toggle" onclick="toggleMusic()">▶</button>
     </div>
-    <div class="music-info">
-      <div class="music-title">Poesia Acústica #2 — Sobre Nós</div>
-      <div class="music-sub">Delacruz • Maria • Ducon • BK' e outros</div>
+    <div id="yt-container">
+      <iframe id="yt-frame"
+        src="https://www.youtube-nocookie.com/embed/t_CkXdWFNYE?enablejsapi=1&rel=0&modestbranding=1"
+        allow="autoplay; encrypted-media; fullscreen" allowfullscreen></iframe>
     </div>
-    <button class="music-play-btn" id="play-btn" onclick="toggleMusic()">▶</button>
-  </div>
-
-  <!-- YouTube hidden -->
-  <div id="yt-wrap" style="position:fixed;top:-9999px;left:-9999px;width:1px;height:1px;overflow:hidden;">
-    <iframe id="yt-frame" allow="autoplay; encrypted-media" allowfullscreen
-      src="https://www.youtube-nocookie.com/embed/t_CkXdWFNYE?enablejsapi=1&autoplay=0&loop=1&playlist=t_CkXdWFNYE">
-    </iframe>
   </div>
 
 </div>
-
 
 <script>
 const PHOTOS = [
@@ -189,24 +169,22 @@ PHOTOS.forEach((src,i) => {
   d.style.backgroundImage = `url(${src})`;
   bgs.appendChild(d);
 });
+let bgIdx = 0;
+setInterval(() => {
+  const slides = document.querySelectorAll('.bg-slide');
+  slides[bgIdx].classList.remove('active');
+  bgIdx = (bgIdx+1) % slides.length;
+  slides[bgIdx].classList.add('active');
+}, 4000);
 
 // Photo strip
 const strip = document.getElementById('photo-strip');
-PHOTOS.forEach((src,i) => {
+PHOTOS.forEach(src => {
   const img = document.createElement('img');
   img.src = src;
   img.onclick = () => { document.getElementById('lb-img').src=src; document.getElementById('lightbox').classList.add('open'); };
   strip.appendChild(img);
 });
-
-// Cycle bg
-let bgIdx = 0;
-setInterval(() => {
-  const slides = document.querySelectorAll('.bg-slide');
-  slides[bgIdx].classList.remove('active');
-  bgIdx = (bgIdx + 1) % slides.length;
-  slides[bgIdx].classList.add('active');
-}, 4000);
 
 // Petals
 const pc = document.getElementById('petals');
@@ -216,13 +194,11 @@ for(let i=0;i<28;i++){
   pc.appendChild(p);
 }
 
-// Counter juntos
+// Counters
 function updateCounters(){
   const start = new Date(2025,10,11);
   const apart = new Date(2026,0,23);
   const now = new Date();
-
-  // Juntos
   let a=now.getFullYear()-start.getFullYear(), m=now.getMonth()-start.getMonth(), d=now.getDate()-start.getDate();
   if(d<0){m--;d+=new Date(now.getFullYear(),now.getMonth(),0).getDate();}
   if(m<0){a--;m+=12;}
@@ -231,71 +207,55 @@ function updateCounters(){
   document.getElementById('j-d').textContent=d;
   document.getElementById('j-h').textContent=now.getHours();
   document.getElementById('j-min').textContent=now.getMinutes();
-
-  // Separados
-  const diff = now - apart;
-  const sd = Math.floor(diff/86400000);
-  const sh = Math.floor((diff%86400000)/3600000);
-  const sm = Math.floor((diff%3600000)/60000);
-  const ss = Math.floor((diff%60000)/1000);
-  document.getElementById('s-d').textContent=sd;
-  document.getElementById('s-h').textContent=sh;
-  document.getElementById('s-min').textContent=sm;
-  document.getElementById('s-sec').textContent=ss;
+  const diff=now-apart;
+  document.getElementById('s-d').textContent=Math.floor(diff/86400000);
+  document.getElementById('s-h').textContent=Math.floor((diff%86400000)/3600000);
+  document.getElementById('s-min').textContent=Math.floor((diff%3600000)/60000);
+  document.getElementById('s-sec').textContent=Math.floor((diff%60000)/1000);
 }
 updateCounters();
-setInterval(updateCounters, 1000);
+setInterval(updateCounters,1000);
 
-// Music - YouTube iframe API
-let ytPlayer = null;
-let playing = false;
+// Music via YouTube iframe API
+let ytPlayer, musicOn = false;
 
-function onYouTubeIframeAPIReady(){
+window.onYouTubeIframeAPIReady = function(){
   ytPlayer = new YT.Player('yt-frame', {
-    events: {
-      onStateChange: (e) => {
-        if(e.data === YT.PlayerState.PLAYING){
-          document.getElementById('play-btn').textContent = '⏸';
-          document.getElementById('music-wave').classList.remove('paused');
-        } else {
-          document.getElementById('play-btn').textContent = '▶';
-          document.getElementById('music-wave').classList.add('paused');
-        }
+    events:{
+      onStateChange: e => {
+        const on = e.data === YT.PlayerState.PLAYING;
+        document.getElementById('music-toggle').textContent = on ? '⏸' : '▶';
+        document.getElementById('music-disc').classList.toggle('spinning', on);
+        document.getElementById('music-wave').className = 'music-wave' + (on ? ' on' : '');
       }
     }
   });
-}
+};
+
+// Load YT API
+const ytScript = document.createElement('script');
+ytScript.src = 'https://www.youtube.com/iframe_api';
+document.head.appendChild(ytScript);
 
 function toggleMusic(){
-  if(!ytPlayer){ return; }
-  if(playing){
-    ytPlayer.pauseVideo();
-    playing = false;
-  } else {
-    ytPlayer.playVideo();
-    playing = true;
-  }
+  const container = document.getElementById('yt-container');
+  if(!ytPlayer){ container.classList.toggle('open'); return; }
+  if(musicOn){ ytPlayer.pauseVideo(); musicOn=false; }
+  else { ytPlayer.playVideo(); musicOn=true; container.classList.add('open'); }
 }
 
-// Load YouTube API
-const tag = document.createElement('script');
-tag.src = 'https://www.youtube.com/iframe_api';
-document.head.appendChild(tag);
-
-// Burst hearts
-function burstHearts(cx,cy){
-  const c=document.createElement('div');c.className='burst';c.style.left=cx+'px';c.style.top=cy+'px';
+// Heart burst
+document.getElementById('heart-icon').addEventListener('click', e => {
   const em=['❤️','💕','💖','💗','🌹','✨'];
+  const c=document.createElement('div'); c.className='burst'; c.style.left=e.clientX+'px'; c.style.top=e.clientY+'px';
   for(let i=0;i<14;i++){
-    const h=document.createElement('div');h.className='burst-heart';h.textContent=em[Math.floor(Math.random()*em.length)];
-    const a=Math.random()*Math.PI*2,dist=60+Math.random()*90;
-    h.style.setProperty('--dx',Math.cos(a)*dist+'px');h.style.setProperty('--dy',Math.sin(a)*dist+'px');
-    h.style.animationDelay=Math.random()*.15+'s';c.appendChild(h);
+    const h=document.createElement('div'); h.className='burst-heart'; h.textContent=em[Math.floor(Math.random()*em.length)];
+    const a=Math.random()*Math.PI*2, dist=60+Math.random()*90;
+    h.style.setProperty('--dx',Math.cos(a)*dist+'px'); h.style.setProperty('--dy',Math.sin(a)*dist+'px');
+    h.style.animationDelay=Math.random()*.15+'s'; c.appendChild(h);
   }
-  document.body.appendChild(c);setTimeout(()=>c.remove(),1300);
-}
-
-document.querySelector('.heart-icon').addEventListener('click', e => burstHearts(e.clientX, e.clientY));
+  document.body.appendChild(c); setTimeout(()=>c.remove(),1300);
+});
 </script>
 </body>
 </html>
